@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カスタマイズ可能なタイマー</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container pt-3">
+        <!-- タイマー表示部分 -->
+        <div class="row mb-4">
+            <div class="col text-center">
+                <div id="timerDisplay" class="display-4">00:00</div>
+            </div>
+        </div>
+
+        <!-- タイマー設定部分 -->
+        <div class="row mb-2">
+            <div class="col">
+                <input type="number" id="minutesInput" class="form-control form-control-lg text-center" placeholder="分" min="1" max="120">
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col">
+                <button id="setTimerButton" class="btn btn-primary btn-lg btn-block">タイマー設定</button>
+            </div>
+        </div>
+
+        <!-- 中間アラーム設定部分 -->
+        <div class="row mb-2" id="alerts">
+            <div class="col-3">
+                <div class="form-check">
+                    <input type="checkbox" id="alert15min" class="form-check-input">
+                    <label for="alert15min" class="form-check-label">15分前</label>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="form-check">
+                    <input type="checkbox" id="alert10min" class="form-check-input">
+                    <label for="alert10min" class="form-check-label">10分前</label>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="form-check">
+                    <input type="checkbox" id="alert5min" class="form-check-input">
+                    <label for="alert5min" class="form-check-label">5分前</label>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="form-check">
+                    <input type="checkbox" id="alert1min" class="form-check-input">
+                    <label for="alert1min" class="form-check-label">1分前</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- スタート・ストップ・リセットボタン部分 -->
+        <div class="row mb-4">
+            <div class="col-4">
+                <button id="startButton" class="btn btn-success btn-lg btn-block">スタート</button>
+            </div>
+            <div class="col-4">
+                <button id="stopButton" class="btn btn-danger btn-lg btn-block">ストップ</button>
+            </div>
+            <div class="col-4">
+                <button id="resetButton" class="btn btn-warning btn-lg btn-block">リセット</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- オーディオファイル部分 -->
+    <audio id="finalAlertSound" src="final-alert.wav" preload="auto"></audio>
+    <audio id="alert1minSound" src="alert1min.wav" preload="auto"></audio>
+    <audio id="alert5minSound" src="alert5min.wav" preload="auto"></audio>
+    <audio id="alert10minSound" src="alert10min.wav" preload="auto"></audio>
+    <audio id="alert15minSound" src="alert15min.wav" preload="auto"></audio>
+
+    <script src="timer.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+/* タイマー表示のスタイル */
+#timerDisplay {
+    font-size: 3rem; /* 大きなフォントサイズ */
+    font-weight: bold; /* 太字 */
+    color: #343a40; /* ダークグレー */
+    background-color: #f8f9fa; /* ライトグレー */
+    border-radius: 10px; /* 角を丸くする */
+    padding: 20px; /* 内側の余白 */
+    text-align: center; /* 中央揃え */
+    margin-bottom: 20px; /* 下部の余白 */
+}
+
+/* タイマー設定の入力フィールド */
+#minutesInput {
+    font-size: 1.5rem; /* 大きめのフォントサイズ */
+    text-align: center; /* 中央揃え */
+    margin-bottom: 1rem; /* 下部の余白 */
+}
+
+/* ボタンのスタイル */
+button {
+    font-size: 1.25rem; /* 大きめのフォントサイズ */
+    padding: 0.75rem 1.5rem; /* 上下の内側余白0.75rem、左右の内側余白1.5rem */
+    border-radius: 0.5rem; /* 角を丸くする */
+    margin-bottom: 1rem; /* 下部の余白 */
+    width: 100%; /* 全幅に広げる */
+}
+
+/* アラーム設定部分のスタイル */
+#alerts {
+    margin-bottom: 1rem; /* 下部の余白 */
+    display: flex; /* フレックスボックスにする */
+    justify-content: space-between; /* 均等にスペースを配置 */
+}
+
+#alerts .form-check-label {
+    font-size: 1rem; /* 通常のフォントサイズ */
+}
+
+/* バージョン情報のスタイル */
+#appVersion {
+    color: #6c757d; /* ミディアムグレー */
+    font-size: 0.875rem; /* 小さめのフォントサイズ */
+    text-align: center; /* 中央揃え */
+    display: block; /* ブロック要素として表示 */
+    margin-top: 2rem; /* 上部の余白 */
+}
+
+/* スマートフォン向けのレスポンシブスタイル */
+@media (max-width: 576px) {
+    #timerDisplay {
+        font-size: 2.5rem; /* スマートフォン向けにフォントサイズを調整 */
+    }
+    
+    button {
+        font-size: 1rem; /* スマートフォン向けにフォントサイズを調整 */
+        padding: 0.5rem 1rem; /* スマートフォン向けに内側余白を調整 */
+    }
+}
